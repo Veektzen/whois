@@ -178,3 +178,7 @@ nav {
 #upper-container {
   width: fit-content;
 }
+
+.short-desc{
+  margin-bottom:10%;
+}
