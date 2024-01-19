@@ -4,7 +4,7 @@ let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext("2d");
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = window.innerHeight*1.2;
 
 const numberOfPixels = width*height;
 
@@ -45,6 +45,8 @@ var startY;
       var deltaY = event.touches[0].clientY - startY;
 
       if (deltaY < 0) {
+        routine();
+        routine();
         routine();
         // Your code here
       }
