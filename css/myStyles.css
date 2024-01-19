@@ -95,13 +95,23 @@ h1 {
   font-size: 400%;
 }
 
-@media only screen{
+@media only screen and (max-width: 600px){
   #experienceContent div a {
     display: block;
   }
 
   .project-title {
     font-size: 180% !important;
+  }
+
+  .project {
+    padding-top: 3%;
+  }
+
+  .fixed-bottom {
+    overflow:auto !important;
+    height:100% !important;
+    padding-top:150% !important;
   }
 }
 
