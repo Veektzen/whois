@@ -9,8 +9,8 @@ canvas.height = window.innerHeight*1.3;
 const numberOfPixels = width*height;
 
 // Define the frame rate
-var frameRate = 60;
-var interval = 500 / frameRate;
+var frameRate = 27;
+var interval = 1000 / frameRate;
 var lastScrollTop = 100;
 
 // Black background
