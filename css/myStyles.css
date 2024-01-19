@@ -95,6 +95,12 @@ h1 {
   font-size: 400%;
 }
 
+/* .fixed-bottom {
+  overflow:auto !important;
+  height:100% !important;
+  padding-top:35% !important;
+} */
+
 @media only screen and (max-width: 600px){
   #experienceContent div a {
     display: block;
@@ -111,9 +117,11 @@ h1 {
   .fixed-bottom {
     overflow:auto !important;
     height:100% !important;
-    padding-top:150% !important;
+    padding-top:100% !important;
   }
 }
+
+
 
 #experienceContent h1,
 #experienceContent p {
@@ -179,6 +187,205 @@ nav {
   width: fit-content;
 }
 
-.short-desc{
+.experience-sentence{
   margin-bottom:10%;
+}
+
+#upper-container{
+  overflow:hidden !important;
+}:root {
+  --pad: max(20px, 4vmin);
+  --morePad: max(30px, 6vmin);
+  --someMorePad: max(40px, 8vmin);
+}
+
+/* my additional CSS to Canvas element */
+#canvas {
+  background-image: radial-gradient(
+    farthest-corner at 50% 80%,
+    #242424 0%,
+    #0f0f0f 80%,
+    #0f0f0f 100%
+  );
+  display: block;
+  position: fixed;
+  z-index: -1000;
+  pointer-events: none;
+}
+
+body,
+h1 {
+  font-weight: 100;
+  cursor: crosshair;
+  width: fit-content;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.frame {
+  display: block;
+  position: fixed;
+  border: 1px solid gray;
+  top: var(--pad);
+  bottom: var(--pad);
+  left: var(--pad);
+  right: var(--pad);
+  z-index: -900;
+}
+
+.mask .top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--pad); /* Set the desired height */
+  background-color: rgb(10, 10, 10);
+  z-index: 1000; /* Adjust the z-index to make sure it's on top */
+  opacity: 1;
+}
+
+.mask .bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--pad); /* Set the desired height */
+  background-color: rgb(10, 10, 10);
+  z-index: 1000; /* Adjust the z-index to make sure it's on top */
+  opacity: 1;
+}
+.mask .right {
+  position: fixed;
+  right: 0;
+  height: 100%;
+  width: var(--pad); /* Set the desired height */
+  background-color: rgb(10, 10, 10);
+  z-index: 1000; /* Adjust the z-index to make sure it's on top */
+  opacity: 1;
+}
+.mask .left {
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: var(--pad); /* Set the desired height */
+  background-color: rgb(10, 10, 10);
+  z-index: 1000; /* Adjust the z-index to make sure it's on top */
+  opacity: 1;
+}
+
+.content-section {
+  display: none;
+  opacity: 0;
+}
+
+.project-title {
+  font-size: 400%;
+}
+
+/* .fixed-bottom {
+  overflow:auto !important;
+  height:100% !important;
+  padding-top:35% !important;
+} */
+
+@media only screen and (max-width: 600px){
+  #experienceContent div a {
+    display: block;
+  }
+
+  .project-title {
+    font-size: 180% !important;
+  }
+
+  .project {
+    padding-top: 3%;
+  }
+
+  .fixed-bottom {
+    overflow:auto !important;
+    height:100% !important;
+    padding-top:100% !important;
+  }
+}
+
+
+
+#experienceContent h1,
+#experienceContent p {
+  display: inline;
+  vertical-align: middle;
+}
+
+.project {
+  display: block;
+  padding-top: 3%;
+}
+
+.content-section.active {
+  /* transition-property: opacity; */
+  transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
+  transition-duration: 3s;
+  display: block;
+  width: 100%;
+  opacity: 1;
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.container-fluid {
+  margin: 0;
+  padding-top: var(--morePad);
+  padding-bottom: var(--morePad);
+  padding-left: var(--someMorePad);
+  padding-right: var(--someMorePad);
+  width: 100%;
+  z-index: -100;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+bold {
+  font-weight: 700;
+}
+
+a:hover {
+  color: gray;
+  cursor: crosshair;
+}
+
+#page {
+  color: white;
+  width: fit-content;
+}
+
+body {
+  background-color: #0f0f0f;
+}
+
+nav {
+  z-index: 10000;
+  width: fit-content;
+}
+
+#upper-container {
+  width: fit-content;
+}
+
+.experience-sentence{
+  margin-bottom:10%;
+}
+
+#upper-container{
+  overflow:hidden !important;
 }
