@@ -95,13 +95,13 @@ h1 {
   font-size: 400%;
 }
 
-@media only screen and (hover: none) and (pointer: coarse) {
+@media only screen{
   #experienceContent div a {
     display: block;
   }
 
   .project-title {
-    font-size: 200%;
+    font-size: 180% !important;
   }
 }
 
